@@ -125,7 +125,8 @@
         <h1>Contact</h1>
 
         <div class="contact-section">
-            <form action="" method="post">
+            <form action="/" method="post">
+            {% csrf_token %}
                 <input class="form-input" type="email" name="email" id="email" placeholder="Enter email address here" required>
                 <input class="form-input" type="fname" name="fname" id="fname" placeholder="Enter first name here" required>
                 <input class="form-input" type="number" name="cnumber" id="cnumber" placeholder="Enter contact number here" required>
