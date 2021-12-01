@@ -2,8 +2,115 @@
 <html>
 <head>
     <title>About Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *{
+            margin: auto;
+        }
+        .about-section{
+            background-color: #FAEBD7;
+            margin: 50px;
+            height: 500px;
+        }
+
+        .text-center{
+            text-align: center;
+            font-size: 50px;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .p-center{
+            text-align: justify;
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        .footer-section{
+            background-color: black;
+            padding: 20px;
+        }
+
+        .text{
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>About page</h1>
+    <!--Header code start here-->
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <span class="fs-4">Project Match Maker</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link " aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" id="#contact">Contact</a></li>
+        {% if user.is_authenticated %}
+        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
+        {% else %}
+        <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+        <li class="nav-item"><a href="{% url 'register' %}" class="nav-link">Sign-up</a></li>
+        {% endif %}
+      </ul>
+    </header>
+  </div>
+  <!-- Header code end here -->
+
+  <!-- About page content start here -->
+    <div class = "about-section">
+        <div class="container">
+            <h1 class="text-center">What is Project Match maker</h1>
+            <p class="p-center">Project match maker would be offering to find a partner according to thier skills
+            so it would be benefits to each and every group and they can perform well in group project and also get some good marks.</p>
+            <p class="p-center">Project match maker has one significant advantage that group leader show every students profile, when he got
+            matched and he can alsp cancel the match or delete their profile form match list. It is easy for group leader to select a perfect group
+            partner. it can solve the problem and also saved a lot time for student and group leader.</p>
+            <p class="p-center">Using match making function will increase the number of studnets reqeusts per day as it will be very easy for them 
+            to find a perfect group partner with their required skills.</p>
+            <p class="p-center">When the students having problem with the sign-up and login, they directly contact to admin section,
+            and they can solve it with in a few hours.</p>
+        </div>
+    </div>
+  <!-- About page content end here -->
+
+  <!-- Personal information start here-->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Kathan Sheth <span class="text-muted">BSc. Computer Science</span></h2>
+        <p class="lead">Email-id : kathan.sheth@study.beds.ac.uk</p>
+        <p class="lead">Phone number : 07404291815</p>
+        <p class="lead">Address : University of Bedfordshire, UK</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+  <!-- Personal information end here-->
+    <br>
+    <br>
+    <br>
+    <br>
+  <!--Footer code start here-->
+    <footer>
+        <div class="footer-section">
+            <p class="text">Copyright &copy; 2020 Project Match Maker</p>
+        </div>
+    </footer>
+
+<!--Footer code end here-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
