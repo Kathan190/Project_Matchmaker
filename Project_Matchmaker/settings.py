@@ -125,5 +125,5 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'matchmaker-home'
+LOGIN_REDIRECT_URL = 'matchmaker-main'
 LOGIN_URL = 'login'
