@@ -20,22 +20,42 @@
     <!--Header code start here-->
     <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <a href="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
         <span class="fs-4">Project Match Maker</span>
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/" class="nav-link " aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#" class="nav-link" id="#contact">Contact</a></li>
+        <li class="nav-item"><a href="/home" class="nav-link " aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="/main" class="nav-link">Service</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link" id="#contact">Contact</a></li>
+        {% if user.is_authenticated %}
+        <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link">Profile</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Logout</a></li>
+        {% else %}
         <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Sign-up</a></li>
+        {% endif %}
       </ul>
     </header>
     </div>
-    <!-- Header code end here -->
-    <h1>{{user.username}}</h1>
+
+    <div style="margin-left: 70px; margin-right: 70px; background-color: rgba(236, 235, 235, 0.979); border-radius: 20px;">
+     <br> 
+     <h1 style="margin-left: 20px; margin-right: 20px;">Profile..</h1><br>
+      <h3 style="margin-left: 20px; margin-right: 20px;">Name :<span class="text-muted"> {{user.fname}}</span></h3>
+      <br>
+      <h3 style="margin-left: 20px; margin-right: 20px;">Username :<span class="text-muted"> {{user.username}}</span></h3>
+      <br>
+      <h3 style="margin-left: 20px; margin-right: 20px;"> Contact Number :<span class="text-muted"> {{user.password1}}</span></h3>
+      <br>
+      <h3 style="margin-left: 20px; margin-right: 20px;">Email :<span class="text-muted"> {{user.email}}</span></h3>
+    <br>
+    </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
     <!--Footer code start here-->
     <footer>
         <div class="footer-section">
