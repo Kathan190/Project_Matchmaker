@@ -20,3 +20,24 @@ class Course(models.Model):
 
     def __str__(self):
         return self.cname
+
+class Year(models.Model):
+    title = models.CharField(max_length=200)
+    date_posted = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
+
+class SEyear(models.Model):
+    title = models.CharField(max_length=100)
+    date_posted = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
+
+class BMyear(models.Model):
+    title = models.CharField(max_length=100)
+    date_posted = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
