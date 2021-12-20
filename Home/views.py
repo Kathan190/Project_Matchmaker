@@ -54,3 +54,6 @@ def bm(request):
         'bmyears':BMyear.objects.all()
     }
     return render(request, 'home/bm.html', context)
+
+def csyear1(request):
+    return render(request, 'home/csyear1.html')

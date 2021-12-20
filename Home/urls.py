@@ -11,4 +11,5 @@ urlpatterns = [
     path('cs', views.cs, name="matchmaker-cs"),
     path('se', views.se, name="matchmaker-se"),
     path('bm', views.bm, name="matchmaker-bm"),
+    path('csyear1', views.csyear1, name="csyear1"),
 ]
