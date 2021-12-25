@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, request
-from Home.models import Contact
+from Home.models import CSyear1, Contact
 from Home.models import Course
 from Home.models import Year
 from Home.models import SEyear
 from Home.models import BMyear
+from Home.models import CSyear1
+from Home.models import CSyear2
+from Home.models import CSyear3
 
 # Create your views here.
 
@@ -56,4 +59,20 @@ def bm(request):
     return render(request, 'home/bm.html', context)
 
 def csyear1(request):
-    return render(request, 'home/csyear1.html')
+    context = {
+        'csyears1':CSyear1.objects.all()
+    }
+    return render(request, 'home/csyear1.html', context)
+
+def csyear2(request):
+    context = {
+        'csyears2':CSyear2.objects.all()
+    }
+    return render(request, 'home/csyear2.html', context)
+
+
+def csyear3(request):
+    context = {
+        'csyears3':CSyear3.objects.all()
+    }
+    return render(request, 'home/csyear3.html', context)
