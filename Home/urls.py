@@ -14,4 +14,5 @@ urlpatterns = [
     path('csyear1', views.csyear1, name="csyear1"),
     path('csyear2', views.csyear2, name="csyear2"),
     path('csyear3', views.csyear3, name="csyear3"),
+    path('webdevelopment', views.webdevelopment, name="webdevelopment"),
 ]

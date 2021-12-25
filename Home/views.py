@@ -76,3 +76,6 @@ def csyear3(request):
         'csyears3':CSyear3.objects.all()
     }
     return render(request, 'home/csyear3.html', context)
+
+def webdevelopment(request):
+    return render(request, 'home/webdevelopment.html')
