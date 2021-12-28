@@ -15,4 +15,6 @@ urlpatterns = [
     path('csyear2', views.csyear2, name="csyear2"),
     path('csyear3', views.csyear3, name="csyear3"),
     path('webdevelopment', views.webdevelopment, name="webdevelopment"),
+    path('addskills', views.addskills, name="addskills"),
+    
 ]

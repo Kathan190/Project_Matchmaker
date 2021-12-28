@@ -79,3 +79,6 @@ def csyear3(request):
 
 def webdevelopment(request):
     return render(request, 'home/webdevelopment.html')
+
+def addskills(request):
+    return render(request, 'home/addskills.html')
